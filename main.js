@@ -11,13 +11,13 @@ greencar_x = 5;
 greencar_y = 225;
 
 function add() {
-	background_imgTag = new Image()
+	background_imgTag = new Image();
 	background_imgTag.onload = uploadBackground;
-	background_imgTag.src = background_image
+	background_imgTag.src = background_image;
 
-	greencar_imgTag = new Image()
+	greencar_imgTag = new Image();
 	greencar_imgTag.onload = uploadgreencar;
-	greencar_imgTag.src = greencar_image
+	greencar_imgTag.src = greencar_image;
 }
 
 function uploadBackground() {
@@ -25,7 +25,7 @@ function uploadBackground() {
 }
 
 function uploadgreencar() {
-		ctx.drawImage(greencar_imgTag, greencar_x, greencar_y, greencar_width, greencar_height)
+		ctx.drawImage(greencar_imgTag, greencar_x, greencar_y, greencar_width, greencar_height);
 }
 
 
@@ -75,15 +75,27 @@ function up()
 
 function down()
 {
-	
+		greencar_y = greencar_y + 10;
+		console.log("When down arrow is pressed, x = " + greencar_x + "| y = " +greencar_y);
+		uploadBackground();
+		uploadgreencar();	
 }
 
 function left()
 {
-	//Define function to move the car left side
+	if(greencar_x >=0)
+	{
+		greencar_x = greencar_x - 10;
+		console.log("When left arrow is pressed, x = " + greencar_x + "| y = " +greencar_y);
+		uploadBackground();
+		uploadgreencar();
+	}
 }
 
 function right()
-{
-	//Define function to move the car right side
+{	
+		greencar_y = greencar_y + 10;
+		console.log("When right arrow is pressed, x = " + greencar_x + "| y = " +greencar_y);
+		uploadBackground();
+		uploadgreencar();
 }
