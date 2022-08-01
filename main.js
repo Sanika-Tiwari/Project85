@@ -21,7 +21,7 @@ function add() {
 }
 
 function uploadBackground() {
-	ctx.drawImage(backgroud_imgTag, 0, 0, canvas.width, canvas.height);
+	ctx.drawImage(background_imgTag, 0, 0, canvas.width, canvas.height);
 }
 
 function uploadgreencar() {
