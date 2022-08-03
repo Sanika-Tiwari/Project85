@@ -64,13 +64,10 @@ function my_keydown(e)
 
 function up()
 {
-	if(greencar_y >=0)
-	{
 		greencar_y = greencar_y - 10;
 		console.log("When up arrow is pressed, x = " + greencar_x + "| y = " +greencar_y);
 		uploadBackground();
 		uploadgreencar();
-	}
 }
 
 function down()
@@ -83,13 +80,10 @@ function down()
 
 function left()
 {
-	if(greencar_x >=0)
-	{
-		greencar_x = greencar_x - 10;
+	greencar_x = greencar_x - 10;
 		console.log("When left arrow is pressed, x = " + greencar_x + "| y = " +greencar_y);
 		uploadBackground();
 		uploadgreencar();
-	}
 }
 
 function right()
