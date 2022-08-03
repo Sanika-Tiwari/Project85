@@ -88,7 +88,7 @@ function left()
 
 function right()
 {	
-		greencar_y = greencar_y + 10;
+		greencar_x = greencar_x + 10;
 		console.log("When right arrow is pressed, x = " + greencar_x + "| y = " +greencar_y);
 		uploadBackground();
 		uploadgreencar();
